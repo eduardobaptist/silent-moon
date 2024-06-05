@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, body {
+    height: 100%;
+}
+
+main{
+    background-color: #7680FC;
+    height: 100%;
+}
+
+.main-2{
+    /* background-image: url("../img/teste1.png");
+    background-repeat: no-repeat; */
+    width: 100vw;
+    position: relative;
+}
+
+.btn-entrar{
+    border-radius: 38px;
+    font-family: 'inter', sans-serif;
+    background-color: #FFDB9D;
+    width: 10%;
+    min-width: 10%;
+}
+
+.btn-entrar:hover{
+    background-color: #eecd95;
+}
