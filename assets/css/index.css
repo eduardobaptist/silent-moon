@@ -27,3 +27,18 @@ main{
 .btn-entrar:hover{
     background-color: #eecd95;
 }
+
+
+#imgbage{
+    position: relative;
+    top: -250px;
+}
+.text-overlay {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2em;
+    pointer-events: none; /* Para garantir que o texto não interfira em cliques na imagem */
+}
