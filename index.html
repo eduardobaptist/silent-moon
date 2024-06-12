@@ -12,7 +12,19 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="assets/css/index.css" />
-
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="assets/img/silent-moon-favicon.svg"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Silent Moon</title>
   </head>
 
@@ -21,30 +33,237 @@
       <nav class="navbar bg-body-tertiary">
         <div class="container d-flex align-items-center">
           <a class="navbar-brand" href="#">
-            <img
-              src="assets/img/logo.png"
-              alt="Bootstrap"
-            />
+            <img src="assets/img/logo.png" alt="Silent Mood" class="logo" />
           </a>
-          <button type="button" class="btn  btn-entrar">Entrar</button>
+          <button
+            type="button"
+            class="btn btn-logar"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-login"
+          >
+            <span>Entrar</span>
+          </button>
         </div>
       </nav>
+      <!-- Modal de Login -->
+      <div
+        class="modal fade modal-lg"
+        id="modal-login"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-login"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal-login">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <form class="mt-5">
+                  <h3 class="mb-4 text-center">Entrar</h3>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-user"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userLogin"
+                      aria-describedby="login"
+                      placeholder="Login"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-lock"></i>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="userPassword"
+                      aria-describedby="password"
+                      placeholder="Senha"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <button type="submit" class="btn btn-entrar w-100">
+                      Entrar
+                    </button>
+                  </div>
+                  <div class="mb-3 input-container">
+                    <button
+                      type="button"
+                      class="btn btn-cadastrar w-100"
+                      data-bs-toggle="modal"
+                      data-bs-target="#modal-cadastro"
+                    >
+                      Cadastre-se
+                    </button>
+                  </div>
+                  <div
+                    class="mb-3 input-container d-flex justify-content-center"
+                  >
+                    <p>
+                      <u
+                        ><a
+                          href="#"
+                          class="esqueci-senha"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modal-login"
+                          >Esqueci minha senha</a
+                        ></u
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de Cadastro -->
+      <div
+        class="modal fade modal-lg"
+        id="modal-cadastro"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="modal-cadastro"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content modal-cadastro">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="d-flex justify-content-center">
+                <form class="mt-5">
+                  <h3 class="mb-4 text-center">Insira seus dados</h3>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-user"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userNome"
+                      aria-describedby="nome"
+                      placeholder="Nome"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-envelope"></i>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="userEmail"
+                      aria-describedby="email"
+                      placeholder="E-mail"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-lock"></i>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="userPassword"
+                      aria-describedby="password"
+                      placeholder="Senha"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <i class="input-icon fa-solid fa-lock"></i>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="userPassword"
+                      aria-describedby="password"
+                      placeholder="Confirme sua senha"
+                    />
+                  </div>
+                  <div class="mb-3 input-container">
+                    <button type="button" class="btn btn-entrar w-100">
+                      Confirmar
+                    </button>
+                  </div>
+                  <div
+                    class="mb-3 input-container d-flex justify-content-center"
+                  >
+                    <p>
+                      <u
+                        ><a href="#" class="esqueci-senha"
+                          >Já tem uma conta? Faça login aqui</a
+                        ></u
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-        <div class="main-2 container d-flex justify-content-center">
-            <img src="assets/img/mulher-meditando.png" class="img-fluid pt-5">
+      <div class="div-back container d-flex justify-content-center">
+        <img src="assets/img/mulher-meditando.png" class="img-fluid" />
+        <div class="div-base container d-flex justify-content-center">
+          <img
+            id="img-base"
+            src="assets/img/retangulo-azul.png"
+            class="img-fluid"
+          />
+          <p class="text-overlay">Somos o que fazemos</p>
+          <button
+            type="button"
+            class="btn btn-img bg-light mt-2"
+            data-bs-toggle="modal"
+            data-bs-target="#modal-cadastro"
+          >
+            <strong>Torne-se a sua melhor versão</strong>
+          </button>
+          <a href="#" class="text-light link-entrar"
+            >JÁ TEM UMA CONTA? CONECTE-SE</a
+          >
         </div>
-        
-        <div class="main-3 container d-flex justify-content-center" id="LoginRegistro">
-          <img id="imgbage" src="assets/img/Base-do-chao.png" class="img-fluid pt-5">
-          <h1 class="text-overlay">Somos o que fazemos</h1>
+      </div>
+      <div class="container mockups-div">
+        <div class="row">
+          <div
+            id="carrossel"
+            class="col-md-6 col-sm-12 carousel-slide justify-content-center"
+          >
+            <img
+              src="assets/img/login-app.png"
+              class="mockups-img img-fluid prev"
+            />
+            <img
+              src="assets/img/lembrete-sessao-app.png"
+              class="mockups-img img-fluid active"
+            />
+            <img
+              src="assets/img/foco-app.png"
+              class="mockups-img img-fluid next"
+            />
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <p class="text-right text-mockup text-start">
+              Lembretes para sessões de meditação
+            </p>
+          </div>
         </div>
+      </div>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <!-- Bootstrap JS -->
     <script
