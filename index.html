@@ -29,248 +29,500 @@
   </head>
 
   <body>
-    <header>
-      <nav class="navbar bg-body-tertiary">
-        <div class="container d-flex align-items-center">
-          <a class="navbar-brand" href="#">
-            <img src="assets/img/logo.png" alt="Silent Mood" class="logo" />
-          </a>
-          <button
-            type="button"
-            class="btn btn-logar"
-            data-bs-toggle="modal"
-            data-bs-target="#modal-login"
-          >
-            <span>Entrar</span>
-          </button>
-        </div>
-      </nav>
-      <!-- Modal de Login -->
-      <div
-        class="modal fade modal-lg"
-        id="modal-login"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="modal-login"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content modal-login">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex justify-content-center">
-                <form class="mt-5">
-                  <h3 class="mb-4 text-center">Entrar</h3>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-user"></i>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userLogin"
-                      aria-describedby="login"
-                      placeholder="Login"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-lock"></i>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="userPassword"
-                      aria-describedby="password"
-                      placeholder="Senha"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <button type="submit" class="btn btn-entrar w-100">
-                      Entrar
-                    </button>
-                  </div>
-                  <div class="mb-3 input-container">
-                    <button
-                      type="button"
-                      class="btn btn-cadastrar w-100"
-                      data-bs-toggle="modal"
-                      data-bs-target="#modal-cadastro"
+    <div class="wrapper">
+      <header>
+        <nav class="navbar bg-body-tertiary">
+          <div class="container d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/logo.png" alt="Silent Mood" class="logo" />
+            </a>
+            <button
+              type="button"
+              class="btn btn-logar"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-login"
+            >
+              <span>Entrar</span>
+            </button>
+          </div>
+        </nav>
+        <!-- Modal de Login -->
+        <div
+          class="modal fade modal-lg"
+          id="modal-login"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-login"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-login">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                  <form class="mt-5" action="pages/dashboard.html">
+                    <h3 class="mb-4 text-center">Entrar</h3>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-user"></i>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="userLogin"
+                        aria-describedby="login"
+                        placeholder="Login"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        aria-describedby="password"
+                        placeholder="Senha"
+                        required
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button type="submit" class="btn btn-entrar w-100">
+                        Entrar
+                      </button>
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button
+                        type="button"
+                        class="btn btn-cadastrar w-100"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modal-cadastro"
+                      >
+                        Cadastre-se
+                      </button>
+                    </div>
+                    <div
+                      class="mb-3 input-container d-flex justify-content-center"
                     >
-                      Cadastre-se
-                    </button>
-                  </div>
-                  <div
-                    class="mb-3 input-container d-flex justify-content-center"
-                  >
-                    <p>
-                      <u
-                        ><a
-                          href="#"
-                          class="esqueci-senha"
-                          data-bs-toggle="modal"
-                          data-bs-target="#modal-login"
-                          >Esqueci minha senha</a
-                        ></u
-                      >
-                    </p>
-                  </div>
-                </form>
+                      <p>
+                        <u
+                          ><a
+                            href="#"
+                            class="esqueci-senha"
+                            data-bs-toggle="modal"
+                            data-bs-target="#modal-login"
+                            >Esqueci minha senha</a
+                          ></u
+                        >
+                      </p>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Modal de Cadastro -->
-      <div
-        class="modal fade modal-lg"
-        id="modal-cadastro"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="modal-cadastro"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content modal-cadastro">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <div class="d-flex justify-content-center">
-                <form class="mt-5">
-                  <h3 class="mb-4 text-center">Insira seus dados</h3>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-user"></i>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userNome"
-                      aria-describedby="nome"
-                      placeholder="Nome"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-envelope"></i>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="userEmail"
-                      aria-describedby="email"
-                      placeholder="E-mail"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-lock"></i>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="userPassword"
-                      aria-describedby="password"
-                      placeholder="Senha"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <i class="input-icon fa-solid fa-lock"></i>
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="userPassword"
-                      aria-describedby="password"
-                      placeholder="Confirme sua senha"
-                    />
-                  </div>
-                  <div class="mb-3 input-container">
-                    <button type="button" class="btn btn-entrar w-100">
-                      Confirmar
-                    </button>
-                  </div>
-                  <div
-                    class="mb-3 input-container d-flex justify-content-center"
-                  >
-                    <p>
-                      <u
-                        ><a href="#" class="esqueci-senha"
-                          >Já tem uma conta? Faça login aqui</a
-                        ></u
-                      >
-                    </p>
-                  </div>
-                </form>
+        <!-- Modal de Cadastro -->
+        <div
+          class="modal fade modal-lg"
+          id="modal-cadastro"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="modal-cadastro"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-cadastro">
+              <div class="modal-header">
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                  <form class="mt-5">
+                    <h3 class="mb-4 text-center">Insira seus dados</h3>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-user"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userNome"
+                        aria-describedby="nome"
+                        placeholder="Nome"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-envelope"></i>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="userEmail"
+                        aria-describedby="email"
+                        placeholder="E-mail"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        aria-describedby="password"
+                        placeholder="Senha"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <i class="input-icon fa-solid fa-lock"></i>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="userPassword"
+                        aria-describedby="password"
+                        placeholder="Confirme sua senha"
+                      />
+                    </div>
+                    <div class="mb-3 input-container">
+                      <button type="button" class="btn btn-entrar w-100">
+                        Confirmar
+                      </button>
+                    </div>
+                    <div
+                      class="mb-3 input-container d-flex justify-content-center"
+                    >
+                      <p>
+                        <u
+                          ><a href="#" class="esqueci-senha"
+                            >Já tem uma conta? Faça login aqui</a
+                          ></u
+                        >
+                      </p>
+                    </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-    <main>
-      <div class="div-back container d-flex justify-content-center">
-        <img src="assets/img/mulher-meditando.png" class="img-fluid" />
-        <div class="div-base container d-flex justify-content-center">
-          <img
-            id="img-base"
-            src="assets/img/retangulo-azul.png"
-            class="img-fluid"
-          />
-          <p class="text-overlay">Somos o que fazemos</p>
-          <button
-            type="button"
-            class="btn btn-img bg-light mt-2"
-            data-bs-toggle="modal"
-            data-bs-target="#modal-cadastro"
-          >
-            <strong>Torne-se a sua melhor versão</strong>
-          </button>
-          <a href="#" class="text-light link-entrar"
-            >JÁ TEM UMA CONTA? CONECTE-SE</a
-          >
-        </div>
-      </div>
-      <div class="container mockups-div">
-        <div class="row">
-          <div
-            id="carrossel"
-            class="col-md-6 col-sm-12 carousel-slide justify-content-center"
-          >
+      <main>
+        <div class="div-back container d-flex justify-content-center">
+          <img src="assets/img/mulher-meditando.png" class="img-fluid" />
+          <div class="div-base container d-flex justify-content-center">
             <img
-              src="assets/img/login-app.png"
-              class="mockups-img img-fluid prev"
+              id="img-base"
+              src="assets/img/retangulo-azul.png"
+              class="img-fluid"
             />
-            <img
-              src="assets/img/lembrete-sessao-app.png"
-              class="mockups-img img-fluid active"
-            />
-            <img
-              src="assets/img/foco-app.png"
-              class="mockups-img img-fluid next"
-            />
-          </div>
-          <div class="col-md-6 col-sm-12">
-            <p class="text-right text-mockup text-start">
-              Lembretes para sessões de meditação
-            </p>
+            <p class="text-overlay">Somos o que fazemos</p>
+            <button
+              type="button"
+              class="btn btn-img bg-light mt-2"
+              data-bs-toggle="modal"
+              data-bs-target="#modal-cadastro"
+            >
+              <strong>Torne-se a sua melhor versão</strong>
+            </button>
+            <a href="#" class="text-light link-entrar"
+              >JÁ TEM UMA CONTA? CONECTE-SE</a
+            >
           </div>
         </div>
-      </div>
-    </main>
+        <div class="container mockups-div">
+          <div class="row">
+            <div
+              id="carrossel"
+              class="col-md-6 col-sm-12 carousel-slide justify-content-center"
+            >
+              <div class="carousel-images w-100">
+                <img
+                  src="assets/img/login-app.png"
+                  class="mockups-img img-fluid prev"
+                />
+                <img
+                  src="assets/img/lembrete-sessao-app.png"
+                  class="mockups-img img-fluid active"
+                />
+                <img
+                  src="assets/img/foco-app.png"
+                  class="mockups-img img-fluid next"
+                />
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 d-flex align-items-center h-100">
+              <p class="text-sm-center text-md-start text-mockup h-100">
+                Lembretes para sessões de meditação
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <img src="assets/img/solzinho-sorrindo.png" class="img-fluid" alt="" />
+        </div>
+        <!-- Planos -->
+        <div class="container mt-4 d-flex justify-content-center">
+          <div class="row">
+            <div class="col-sm-12 col-md-4 d-flex justify-content-center">
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header inter-light text-center">Zen<h5>R$10,00/mês</h5></div>
+                <div class="card-body">
+                  <ul class="list-group">
+                    <ul class="list-group">
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i>
+                        Temporizador de sessão
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspAgenda de sessões
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspWorkshops sobre saúde mental
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspSons personalizados
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspEncontros com (online) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspEncontros com (presenciais) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspAcesso offline ilimitado
+                      </li>
+                      <li class="list-group-item bg-light text-center">
+                        <button type="button" class="btn btn-primary mt-3">Upgrade!</button>
+                      </li>
+                    </ul>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header inter-light text-center">Sábio<h5>R$15,00/mês</h5></div>
+                <div class="card-body">
+                  <ul class="list-group">
+                    <ul class="list-group">
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i>
+                        Temporizador de sessão
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspAgenda de sessões
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspWorkshops sobre saúde mental
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspSons personalizados
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspEncontros com (online) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspEncontros com (presenciais) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-xmark text-danger"></i
+                        >&nbsp&nbspAcesso offline ilimitado
+                      </li>
+                      <li class="list-group-item bg-light text-center">
+                        <button type="button" class="btn btn-primary mt-3">Upgrade!</button>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <div class="card text-bg-light mb-3" style="max-width: 18rem">
+                <div class="card-header inter-light text-center">Monge<h5>R$20,00/mês</h5></div>
+                <div class="card-body">
+                  <ul class="list-group">
+                    <ul class="list-group">
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i>
+                        Temporizador de sessão
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspAgenda de sessões
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspWorkshops sobre saúde mental
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspSons personalizados
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspEncontros com (online) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspEncontros com (presenciais) com especialistas
+                      </li>
+                      <li class="list-group-item bg-light">
+                        <i class="fa-solid fa-check text-success"></i
+                        >&nbsp&nbspAcesso offline ilimitado
+                      </li>
+                      <li class="list-group-item bg-light text-center">
+                        <button type="button" class="btn btn-primary mt-3">Upgrade!</button>
+                      </li>
+                    </ul>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <footer></footer>
+
+        <!-- Depoimentos -->
+        <div class="container d-flex align-items-center mt-5">
+          <p class="text-center text-mockup w-100">
+            Ouça de quem já experimentou
+          </p>
+        </div>
+
+        <div class="container mt-2 d-flex justify-content-center">
+          <div id="youtubeCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/KbnWTMnc5WM?si=Myk3d23rfX0VemJh"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/ae8wwBNcZlI?si=A_wXcNPQ2U9aZsqE"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/NXCOtO6jxrc?si=Xoa9cPVHkbC0CBQn"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/Co2_AIWW9YI?si=0g0mYk7HB1-xdTnb"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/7-cvvVEox5A?si=-ZfQpeldRlGTUmh0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+            <a
+              class="carousel-control-prev"
+              href="#youtubeCarousel"
+              role="button"
+              data-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#youtubeCarousel"
+              role="button"
+              data-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </main>
+
+      <footer class="text-center mt-5 ">
+        <div class="container pt-4">
+          <section class="mb-4">
+          
+        </div>
+
+        <div class="text-center p-3 down-footer">
+          <p class="text-dark">© 2024 Copyright:
+            <a class="" href="#">Silent Moon </a></p>
+        </div> 
+      </footer>  
+    </div>
+
 
     <!-- Bootstrap JS -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"
-      integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/jquery/jquery-3.7.1.min.js"></script>
   </body>
 </html>

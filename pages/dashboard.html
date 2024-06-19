@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+      integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../assets/css/index.css" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/img/silent-moon-favicon.svg"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Silent Moon</title>
+  </head>
+
+  <body>
+    <div class="wrapper bg-light">
+        <header>
+        <nav class="navbar bg-body-tertiary">
+            <div id="sidebar">
+                <div class="me-3" id="toggle-btn">
+                    <i class="fa-solid fa-bars text-primary "></i>
+                </div>
+                <nav class="nav nav-items w-100">
+                    <a class="nav-link text-start" href="#">
+                    <i class="fas fa-chart-bar"></i> Dashboard
+                    </a>
+                    <a class="nav-link text-start" href="#">
+                    <i class="fa-solid fa-user"></i> Conta
+                    </a>
+                </nav>
+                <nav class="nav nav-items w-100 mb-3"><a class="nav-link text-start bottom-item w-100" href="#">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                    </a>
+                </nav>
+            </div>
+            <div class="container d-flex align-items-center">
+            <a class="navbar-brand" href="#">
+                <img src="../assets/img/logo.png" alt="Silent Mood" class="logo" />
+            </a>
+            </div>
+        </nav>
+
+        </header>
+
+        <main class="container mt-4 bg-light">
+            <div class="row">
+                <div class="col-6">
+                    <canvas id="tempoMeditacao"></canvas>
+                </div>
+                <div class="col-6">
+                    <canvas id="numeroSessoes"></canvas>
+                </div>
+            </div>
+        </main>
+  
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../assets/js/sidebar.js"></script>
+    <script>
+        const tempoMeditacaoData = {
+            labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+            datasets: [{
+                label: 'Tempo de Meditação (minutos)',
+                data: [30, 45, 60, 50, 40, 35, 55],
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+            }]
+        };
+        const tempoMeditacaoConfig = {
+            type: 'bar',
+            data: tempoMeditacaoData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Tempo de Meditação Total Semanal'
+                    }
+                }
+            }
+        };
+        const numeroSessoesData = {
+            labels: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
+            datasets: [{
+                label: 'Número de Sessões',
+                data: [2, 3, 4, 2, 3, 2, 4],
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }]
+        };
+        const numeroSessoesConfig = {
+            type: 'bar',
+            data: numeroSessoesData,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Número de Sessões de Meditação Feitas na Semana'
+                    }
+                }
+            }
+        };
+        window.onload = function() {
+            const tempoMeditacaoCtx = document.getElementById('tempoMeditacao').getContext('2d');
+            new Chart(tempoMeditacaoCtx, tempoMeditacaoConfig);
+
+            const numeroSessoesCtx = document.getElementById('numeroSessoes').getContext('2d');
+            new Chart(numeroSessoesCtx, numeroSessoesConfig);
+        };
+    </script>
+  </body>
+</html>

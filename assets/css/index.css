@@ -8,6 +8,10 @@ body {
   background-color: #7680fc;
 }
 
+.inter-light {
+    font-weight: 300;
+}
+
 main {
   background-color: #7680fc;
   height: 100%;
@@ -93,13 +97,14 @@ main {
   justify-content: center;
 }
 
-.carousel-slide {
+.carousel-images {
   width: 100%;
+  position: relative;
 }
 
 .carousel-slide img {
   position: relative;
-  width: 20%;
+  width: 30%;
 }
 
 .carousel-slide img.prev {
@@ -112,7 +117,7 @@ main {
 
 .carousel-slide img.active {
   z-index: 1000;
-  width: 25%;
+  width: 35%;
 }
 
 .text-mockup {
@@ -120,7 +125,6 @@ main {
   font-weight: 200;
   color: white;
   font-size: clamp(1.5rem, 2vw, 4rem);
-  pointer-events: none;
 }
 /* Modal de Cadastro */
 .modal-cadastro {
@@ -246,6 +250,96 @@ main {
   color: rgba(0, 0, 0, 0.53);
   font-weight: normal;
   font-size: 16px;
+}
+
+.card {
+    border-radius: 15px;
+}
+
+.card-header {
+    font-size: 1.4rem;
+}
+
+.list-group li {
+    font-size: 0.8rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  z-index: 10;
+}
+.carousel-control-prev {
+  left: -15%;
+}
+.carousel-control-next {
+  right: -15%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.down-footer {
+  background-color: #ffdb9d;
+  color: black;
+}
+
+/* Sidebar */
+
+#sidebar {
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #0a2770;
+  overflow-x: hidden;
+  transition: width 0.3s;
+  align-items: center;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height of the viewport */
+}
+#sidebar.expanded {
+  width: 200px;
+}
+#sidebar.expanded #toggle-btn {
+  color: white;
+}
+#sidebar .nav-link {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+#sidebar .nav-link:hover {
+  background-color: #0a1e53;
+}
+.sidebar-icon {
+  font-size: 30px;
+  margin: 15px 0;
+}
+#toggle-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+.nav-items {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.bottom-item {
+  margin-top: auto;
+}
+
+.btn-primary {
+  border-radius: 20px;
 }
 
 @media (min-width: 576px) {
